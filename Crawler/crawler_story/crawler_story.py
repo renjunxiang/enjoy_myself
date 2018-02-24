@@ -10,7 +10,7 @@ from openpyxl import load_workbook
 
 # DIR = os.path.dirname(__file__)
 
-DIR = 'D:\\github\\enjoy_myself\\crawler'
+DIR = 'D:\\github\\enjoy_myself\\crawler\\crawler_story'
 
 # 设置项
 profile = webdriver.FirefoxProfile()

@@ -4,7 +4,7 @@ import numpy as np
 
 # DIR = os.path.dirname(__file__)
 
-DIR = 'D:\\github\\enjoy_myself\\crawler'
+DIR = 'D:\\github\\enjoy_myself\\crawler\\crawler_story'
 data = np.load(DIR + '/data/' + '女频言情.npy')
 data = pd.DataFrame(data,
                     columns=['title', 'url', 'author', 'size',
