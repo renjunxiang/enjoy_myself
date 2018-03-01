@@ -1,0 +1,12 @@
+train score_Logistic: 0.905882
+test score_Logistic: 0.906250
+=======finish: Logistic======
+
+train score_KNN: 0.870588
+test score_KNN: 0.812500
+=======finish: KNN======
+
+train score_SVM: 1.000000
+test score_SVM: 0.703125
+=======finish: SVM======
+

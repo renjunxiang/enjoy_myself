@@ -8,7 +8,7 @@ sess = tf.InteractiveSession()
 
 
 def RGB(input_path='D:/tensorflow/picture/5.jpg',
-        save_path=None):
+        save_path=None,show=False):
     image_raw_data = tf.gfile.FastGFile(input_path, 'rb').read()  # windows下使用'r'会出错无法解码，只能以2进制形式rb读取
     img_data = tf.image.decode_jpeg(image_raw_data)
     picture = 256 - sess.run(img_data) #imshow是0白256黑，要转换
@@ -73,9 +73,18 @@ def RGB(input_path='D:/tensorflow/picture/5.jpg',
     plt.title('edge')
     if save_path is not None:
         plt.savefig(save_path)
-    plt.show()
+
+    print(pictures_small)
+    ax6 = fig.add_subplot(2, 3, 6)
+    ax6.imshow((256-picture).astype(float))
+    plt.title('inverse')
+    if save_path is not None:
+        plt.savefig(save_path)
+    if show == True:
+        plt.show()
 
 
 if __name__ == '__main__':
-    RGB(input_path=os.path.dirname(__file__) + '/picture/6.jpg',
-        save_path=os.path.dirname(__file__) + '/picture_transform/6.png')
+    RGB(input_path=os.path.dirname(__file__) + '/picture/4.jpg',
+        save_path=os.path.dirname(__file__) + '/picture_transform/4.png',
+        show=True)
