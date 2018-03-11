@@ -35,23 +35,22 @@ data = [
     ['欲穷千里目', '更上一层楼'],
     ['三日入厨下', '洗手作羹汤'],
     ['未谙姑食性', '先遣小姑尝'],
-    ['寥落古行宫', '宫花寂寞红'],
-    ['白头宫女在', '闲坐说玄宗'],
-    ['白日依山尽', '黄河入海流'],
-    ['欲穷千里目', '更上一层楼'],
-    ['三日入厨下', '洗手作羹汤'],
-    ['未谙姑食性', '先遣小姑尝'],
+    ['红豆生南国', '春来发几枝'],
+    ['愿君多采撷', '此物最相思'],
+    ['终南阴岭秀', '积雪浮云端'],
+    ['林表明霁色', '城中增暮寒'],
+    ['鸣筝金粟柱', '素手玉房前'],
+    ['欲得周郎顾', '此物最相思'],
 ]
 
 # ask = ['你好', '再见', '去死', '滚', '拜拜', '你好', '拜拜，拜拜']
 # answer = ['你好，你好', '再见，再见', '去死，去死', '滚，滚', '拜拜', '你好', '拜拜']
 
-ask = []
-answer = []
+ask=[]
+answer=[]
 for i in data:
     ask.append(i[0])
     answer.append(i[1])
-
 
 def texts_transform(texts=None):
     texts_new = [' '.join(jieba.lcut(i)) for i in texts]
@@ -98,6 +97,7 @@ def seq2seq(input_dic_len=100,
     input_dic_len=100
             input_len=50
             vector_len=200
+            output_len=50
             output_dic_len=100
     '''
     model = Sequential()
@@ -109,12 +109,12 @@ def seq2seq(input_dic_len=100,
     model.add(Bidirectional(GRU(units=32,
                                 activation='tanh',
                                 recurrent_activation='hard_sigmoid',
-                                return_sequences=True)))
-    model.add(GRU(units=32,
-                  activation='tanh',
-                  recurrent_activation='hard_sigmoid',
-                  return_sequences=True))
-    model.add(TimeDistributed(Dense(units=answer_categorical.shape[2], activation="softmax")))
+                                return_sequences=False)))
+    model.add(Dense(units=50,
+                    activation='relu'))
+    model.add(RepeatVector(output_len))
+    model.add(GRU(units=50, return_sequences=True, activation="relu"))
+    model.add(TimeDistributed(Dense(units=answer_categorical.shape[2], activation="relu")))
     optimizer = Adagrad(lr=0.01)
     model.compile(optimizer=optimizer, loss='mse', metrics=['accuracy'])
     return model
@@ -123,7 +123,7 @@ def seq2seq(input_dic_len=100,
 model_seq2seq = seq2seq(input_dic_len=len(tokenizer_ask.word_index),
                         input_len=10, vector_len=100)
 
-model_seq2seq.fit(x=ask_new, y=answer_categorical, batch_size=2, epochs=10)
+model_seq2seq.fit(x=ask_new, y=answer_categorical, batch_size=25, epochs=10)
 
 answer_key = list(tokenizer_answer.word_index.keys())
 answer_values = list(tokenizer_answer.word_index.values())
@@ -141,8 +141,8 @@ def robot(text=None):
 
 
 for i in ask:
-    print('ask:', i)
-    print('answer:', robot(text=i))
+    print(i)
+    print(robot(text=i))
 
 model_seq2seq.predict(np.array([np.random.randint(1, 50, 10)]))
 
