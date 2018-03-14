@@ -52,7 +52,7 @@ def seq2seq(input_dic_len=100,
     ti = concatenate(inputs=[encoding, encoding], axis=-1, name='decoding_input')
     decoding_all = []
     for i in range(output_len):
-        print('creat decoding layer: %d'%i)
+        print('creat decoding layer: %d' % (i + 1))
         ti = Reshape(target_shape=[1, hidden_dim * 2])(ti)
         decoding_t = GRU(units=hidden_dim,
                          return_sequences=False,
@@ -69,4 +69,3 @@ def seq2seq(input_dic_len=100,
     optimizer = Adagrad(lr=0.01)
     model.compile(optimizer=optimizer, loss='mse', metrics=['accuracy'])
     return model
-

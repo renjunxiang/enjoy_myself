@@ -10,14 +10,14 @@ from keras.optimizers import SGD, Adagrad, Adam
 def seq2seq_simple(input_dic_len=100,
                    input_len=50,
                    vector_len=200,
-                   output_dic_len=100,
+                   output_dim=100,
                    output_len=10):
     '''
     
     :param input_dic_len: 输入的字典长度
     :param input_len: 输入的文本长度
     :param vector_len: 词向量维度
-    :param output_dic_len: 输出的字典长度
+    :param output_dim: 输出的字典长度
     :param output_len: 输出的文本长度
     :return: 
     '''
@@ -44,7 +44,7 @@ def seq2seq_simple(input_dic_len=100,
     # decoding过程，按照输出长度复制encoding的结果
     model.add(RepeatVector(output_len))
     model.add(GRU(units=50, return_sequences=True, activation="relu"))
-    model.add(TimeDistributed(Dense(units=output_dic_len, activation="relu")))
-    optimizer = Adagrad(lr=0.01)
+    model.add(TimeDistributed(Dense(units=output_dim, activation="relu")))
+    optimizer = Adam(lr=0.01)
     model.compile(optimizer=optimizer, loss='mse', metrics=['accuracy'])
     return model
