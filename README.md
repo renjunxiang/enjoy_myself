@@ -19,7 +19,6 @@
 通过调整卷积核做一些变换
 ![2](https://github.com/renjunxiang/enjoy_myself/blob/master/tensorflow/color/picture_transform/2.png)<br>
 ![4](https://github.com/renjunxiang/enjoy_myself/blob/master/tensorflow/color/picture_transform/4.png)<br>
-![6](https://github.com/renjunxiang/enjoy_myself/blob/master/tensorflow/color/picture_transform/6.png)<br>
 
 ## Triangulation:三角定位
 求解三元二次方程组

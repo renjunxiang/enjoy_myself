@@ -5622,8 +5622,8 @@ Unable to read VR Path Registry from C:\Users\acer\AppData\Local\openvr\openvrpa
 1519455337752	addons.productaddons	INFO	downloadXHR File download. status=200
 1519455337755	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\acer\AppData\Local\Temp\tmpaddon-887a8c
 1519455342924	addons.productaddons	INFO	downloadXHR File download. status=404
-/gre/modules/addons/GMPProvider.jsm
-1519454633219	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1519610556029	addons.manager	INFO	Skipping background update check
+BUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
 1519454633219	addons.manager	DEBUG	Starting provider: XPIProvider
 1519454633219	addons.xpi	DEBUG	startup
 1519454633220	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
@@ -5797,16 +5797,23 @@ Unable to read VR Path Registry from C:\Users\acer\AppData\Local\openvr\openvrpa
 1519455341042	addons.productaddons	INFO	downloadXHR File download. status=200
 1519455341047	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\acer\AppData\Local\Temp\tmpaddon-377f4d
 1519455346399	addons.productaddons	INFO	downloadXHR File download. status=404
-/gre/modules/addons/GMPProvider.jsm
-1519454970467	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
-1519454970467	addons.manager	DEBUG	Starting provider: XPIProvider
-1519454970467	addons.xpi	DEBUG	startup
-1519454970467	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
-1519454970468	addons.xpi	INFO	Removing all system add-on upgrades.
-1519454970468	addons.xpi	DEBUG	checkForChanges
-1519454970468	addons.xpi	DEBUG	Loaded add-on state: ${}
-1519454970469	addons.xpi	INFO	Mapping activity-stream@mozilla.org to D:\Program Files (x86)\Mozilla Firefox\browser\features\activity-stream@mozilla.org.xpi
-1519454970469	addons.xpi	INFO	Mapping aushelper@mozilla.org to D:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1519610556020	addons.manager	INFO	Skipping background update check
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150090,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150084,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1000B,name=PAPZ::Msg_Destroy) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150090,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150084,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
+elper@mozilla.org to D:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
 1519454970469	addons.xpi	INFO	Mapping firefox@getpocket.com to D:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
 1519454970469	addons.xpi	INFO	Mapping followonsearch@mozilla.com to D:\Program Files (x86)\Mozilla Firefox\browser\features\followonsearch@mozilla.com.xpi
 1519454970469	addons.xpi	INFO	Mapping formautofill@mozilla.org to D:\Program Files (x86)\Mozilla Firefox\browser\features\formautofill@mozilla.org.xpi
@@ -5974,7 +5981,8 @@ Unable to read VR Path Registry from C:\Users\acer\AppData\Local\openvr\openvrpa
 thread '<unnamed>' panicked at 'called `Result::unwrap()` on an `Err` value: Error { repr: Os { code: 10054, message: "远程主机强迫关闭了一个现有的连接。" } }', src\libcore\result.rs:859
 note: Run with `RUST_BACKTRACE=1` for a backtrace.
 1519455480651	addons.manager	INFO	Skipping background update check
-11270	geckodriver::marionette	INFO	Starting browser D:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette", "-headless"]
+1519610556025	addons.manager	INFO	Skipping background update check
+ (x86)\Mozilla Firefox\firefox.exe with args ["-marionette", "-headless"]
 *** You are running in headless mode.
 1519455411538	addons.manager	DEBUG	Application has been upgraded
 1519455411556	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider", "XPIInternal"]
@@ -6154,8 +6162,8 @@ note: Run with `RUST_BACKTRACE=1` for a backtrace.
 1519455714946	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\acer\AppData\Local\Temp\tmpaddon-a20daf
 1519455720001	addons.productaddons	INFO	downloadXHR File download. status=404
 1519455921775	addons.manager	INFO	Skipping background update check
-/gre/modules/addons/GMPProvider.jsm
-1519455497733	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1519610556014	addons.manager	INFO	Skipping background update check
+BUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
 1519455497733	addons.manager	DEBUG	Starting provider: XPIProvider
 1519455497733	addons.xpi	DEBUG	startup
 1519455497733	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
@@ -6329,8 +6337,8 @@ note: Run with `RUST_BACKTRACE=1` for a backtrace.
 1519455716204	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\acer\AppData\Local\Temp\tmpaddon-c5272b
 1519455721146	addons.productaddons	INFO	downloadXHR File download. status=404
 1519456007915	addons.manager	INFO	Skipping background update check
-1519457835452	geckodriver	INFO	Listening on 127.0.0.1:54564
-1519457838511	geckodriver::marionette	INFO	Starting browser D:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette", "-headless"]
+1519610556022	addons.manager	INFO	Skipping background update check
+38511	geckodriver::marionette	INFO	Starting browser D:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette", "-headless"]
 *** You are running in headless mode.
 1519457838765	addons.manager	DEBUG	Application has been upgraded
 1519457838780	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider", "XPIInternal"]
@@ -6510,3 +6518,10 @@ note: Run with `RUST_BACKTRACE=1` for a backtrace.
 1519458534192	addons.productaddons	INFO	downloadXHR File download. status=200
 1519458534196	addons.productaddons	INFO	Downloaded file will be saved to C:\Users\acer\AppData\Local\Temp\tmpaddon-f566f3
 1519458539470	addons.productaddons	INFO	downloadXHR File download. status=404
+1519610556031	addons.manager	INFO	Skipping background update check
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150090,name=PBrowser::Msg_UpdateNativeWindowHandle) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x150084,name=PBrowser::Msg_Destroy) Channel error: cannot send/recv
+
